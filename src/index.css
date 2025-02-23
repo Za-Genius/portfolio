@@ -1,0 +1,200 @@
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import "tailwindcss";
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #c4c3c3de;
+  background: linear-gradient(to top, #091221, #000000, #000000);
+
+  background-attachment: fixed;
+  background-size: cover;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+.glass-bg {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.glass-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255, 0.08);
+  z-index: -10;
+  filter: blur(1px);
+
+  box-shadow:
+    inset 0 0 1px rgba(185, 185, 185, 0.2),
+    0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+.text-span {
+  display: inline-block;
+  overflow: hidden;
+  transform: translateY(30%);
+}
+.typing-words {
+  border-right: 12px solid #90a1b9;
+  white-space: nowrap;
+  padding-right: 2px;
+}
+
+#hello {
+  animation:
+    helloTyping 1s steps(10),
+    typingCursor 8s ease-in-out 0.3s infinite alternate running;
+}
+#world {
+  width: 0;
+  border-right: 0;
+  animation: worldTyping 1s steps(10);
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+#welcome-text {
+  width: 0;
+  white-space: nowrap;
+  animation: 0.5s ease-in 3s forwards running welcomeTyping;
+}
+
+.blinking-cursor {
+  animation: 1s ease-in infinite both running blinking;
+  background-color: #90a1b9;
+  height: 32px;
+  width: 12px;
+  display: none;
+}
+.blinking-cursor-remove {
+  display: none;
+}
+.blinking-cursor-add {
+  display: inline-block;
+}
+.remove-cursor {
+  border-right: 0px;
+}
+
+@keyframes welcomeTyping {
+  0% {
+    width: 0;
+    border-right: 1px solid white;
+  }
+  to {
+    width: 135px;
+    border-right: none;
+  }
+}
+
+@keyframes helloTyping {
+  from {
+    width: 0;
+  }
+  to {
+    width: 105px;
+  }
+}
+@keyframes worldTyping {
+  from {
+    border-right: 12px;
+    width: 0;
+  }
+  to {
+    border-right: 0;
+    width: 100px;
+  }
+}
+@keyframes typingCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 100%;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0%;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0%;
+    transform: scale(1.2);
+  }
+}
+
+#passport-container::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  right: 50px;
+  top: 50px;
+  border-radius: 8px;
+  position: absolute;
+  background-color: rgba(178, 219, 255, 0.03);
+  z-index: -10;
+  filter: blur(6px);
+}
+#passport-container {
+  height: 370px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 4;
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+@media (max-width: 768px) {
+  #passport-container::after {
+    content: "";
+    display: none;
+  }
+}
