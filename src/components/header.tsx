@@ -6,7 +6,7 @@ const Header = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Resume", path: "/OLUWATOBILOBA BAMISEBI-CV-1.pdf" },
-    { name: "Portfolio", path: "/portfolio" },
+    { name: "Portfolio", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];
   return (
