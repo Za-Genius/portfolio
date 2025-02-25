@@ -78,9 +78,9 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="w-full md:w-3/5">
+        <div id="about-me" className="w-full md:w-3/5">
           <p className=" font-extrabold text-4xl sm:text-5xl">
-            I am <span className="text-[#495e84]">Oluwatobiloba Bamisebi</span>{" "}
+            I am <span className="text-[#6f9ff7]">Oluwatobiloba Bamisebi</span>{" "}
             a Developer.
           </p>
           <p className="md:leading-8 font-semibold mt-6">

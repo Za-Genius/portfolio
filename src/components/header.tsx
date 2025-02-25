@@ -11,7 +11,7 @@ const Header = () => {
   ];
   return (
     <div className=" w-full flex justify-between px-4 py-6 sm:px-16 items-center">
-      <div className="rounded-full h-16 w-16 outline-2 outline-blue-300">
+      <div className="rounded-full h-16 w-16 outline-2 outline-[#091221]">
         <img
           src="/pass-photo.JPG"
           alt="HEADSHOT"
@@ -19,13 +19,13 @@ const Header = () => {
           style={{ objectFit: "cover", objectPosition: "top" }}
         />
       </div>
-      <div id="nav" className="">
+      <div id="nav" className=" font-bold">
         <ul className="flex justify-evenly gap-3 text-xs">
           {navItems.map((navItem) => (
             <li
               key={navItem.name}
               className={classNames(
-                "p-0 m-0 hover:text-[#495e84] transition-colors duration-500 uppercase flex gap-1",
+                "p-0 m-0 hover:text-[#495e84] hover:scale-110 transition-all duration-500 uppercase flex gap-1",
                 { "text-[#6e7d99]": location.href == navItem.path }
               )}
             >

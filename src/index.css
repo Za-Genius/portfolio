@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
 @import "tailwindcss";
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Chakra Petch", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #c4c3c3de;
-  background: linear-gradient(to top, #091221, #000000, #000000);
+  background: linear-gradient(to bottom, #091221, #091221, #000000);
 
   background-attachment: fixed;
   background-size: cover;
@@ -25,7 +26,7 @@ body {
 .glass-bg {
   box-sizing: border-box;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .glass-bg::after {
@@ -34,7 +35,7 @@ body {
   inset: 0;
   border-radius: 16px;
   background-color: rgb(255, 255, 255, 0.08);
-  z-index: -10;
+  z-index: -100;
   filter: blur(1px);
 
   box-shadow:
@@ -65,7 +66,7 @@ h1 {
 #world {
   width: 0;
   border-right: 0;
-  animation: worldTyping 1s steps(10);
+  animation: worldTyping 1s steps(14);
   animation-fill-mode: forwards;
   animation-play-state: paused;
 }
@@ -151,14 +152,37 @@ h1 {
   border-radius: 8px;
   position: absolute;
   background-color: rgba(178, 219, 255, 0.03);
-  z-index: -10;
+  z-index: -2;
   filter: blur(6px);
 }
 #passport-container {
   height: 370px;
   border-radius: 8px;
   position: relative;
-  z-index: 4;
+  z-index: 2;
+}
+
+#contact-me {
+  position: relative;
+}
+
+#contact-me::after,
+#contact-me::before {
+  content: "";
+  display: inline-block;
+  bottom: 50%;
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  background-color: #c4c3c3de;
+}
+#contact-me::before {
+  left: 0;
+  transform: translate(-110%, -50%);
+}
+#contact-me::after {
+  right: 0;
+  transform: translate(110%, -50%);
 }
 
 /* button {

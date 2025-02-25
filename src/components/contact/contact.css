@@ -1,0 +1,56 @@
+#send-mail,
+#github {
+  padding: 10px;
+  position: relative;
+  width: 350px;
+  height: 50px;
+}
+
+#send-mail span,
+#github span {
+  inset: 0;
+  padding: 10px;
+  position: absolute;
+  display: inline-block;
+}
+.front {
+  border: 1px solid white;
+  z-index: 2;
+  background-color: #091221;
+  transition:
+    transform 2s ease,
+    opacity 0.5s ease 0.3s,
+    z-index 0.3s ease 1s;
+}
+
+.back {
+  border: 1px solid #091221;
+  color: #091221;
+  opacity: 0;
+  background-color: whitesmoke;
+  transform: rotate3d(1, 0, 0, -180deg);
+  transition:
+    transform 2s ease,
+    opacity 0.5s ease 0.1s,
+    z-index 0.3s ease;
+}
+
+.flip-front {
+  transform: rotate3d(1, 0, 0, 180deg);
+  opacity: 0;
+  z-index: -1;
+}
+.flip-back {
+  transform: rotate3d(1, 0, 0, 0deg);
+  opacity: 1;
+}
+.github-img {
+  opacity: 0;
+  transform: translate(-30%, 50%);
+  transition: all 0.4s cubic-bezier(0.8, -0.8, 0.2, 1.8) 1s;
+}
+
+.swoosh-transitions {
+  opacity: 1;
+  transform: translate(0, 0);
+}
