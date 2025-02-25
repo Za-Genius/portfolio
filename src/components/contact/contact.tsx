@@ -20,7 +20,22 @@ const Contact = () => {
           }
         }
       });
+      githubFront.addEventListener("touchstart", function () {
+        githubFront.classList.add("flip-front");
+        if (githubBack) {
+          githubBack.classList.add("flip-back");
+          if (gitImg) {
+            gitImg.classList.add("swoosh-transitions");
+          }
+        }
+      });
       mailFront.addEventListener("mouseenter", function () {
+        mailFront.classList.add("flip-front");
+        if (mailBack) {
+          mailBack.classList.add("flip-back");
+        }
+      });
+      mailFront.addEventListener("touchstart", function () {
         mailFront.classList.add("flip-front");
         if (mailBack) {
           mailBack.classList.add("flip-back");
@@ -63,12 +78,15 @@ const Contact = () => {
             <span id="mail-front" className="front uppercase">
               Send me a mail
             </span>
-            <span id="mail-back" className="flex back">
-              <a href="mailto:oluwatobiofficial15@gmail.com">
-                <i className="fi fi-rr-envelope inline-block translate-y-1 "></i>
+            <a
+              href="mailto:oluwatobiofficial15@gmail.com"
+              className="text-sm md:text-base"
+            >
+              <span id="mail-back" className="flex back">
+                <i className="fi fi-rr-envelope inline-block translate-y-1"></i>
                 oluwatobiofficial15@gmail.com
-              </a>
-            </span>
+              </span>
+            </a>
           </p>
         </div>
         <div className="w-full relative">
@@ -76,11 +94,12 @@ const Contact = () => {
             <span id="github-front" className="front uppercase">
               git checkout
             </span>
-            <span id="github-back" className="flex back">
-              <a
-                href="https://github.com/Za-Genius"
-                className="text-center text-sm uppercase"
-              >
+            <a
+              target="_blank"
+              href="https://github.com/Za-Genius"
+              className="text-center text-sm uppercase"
+            >
+              <span id="github-back" className="flex back">
                 <img
                   id="github-img"
                   src="/github.png"
@@ -89,11 +108,35 @@ const Contact = () => {
                   className="github-img absolute top-1/2 -translate-y-1/2"
                 />
                 @Za-Genius
-              </a>
-            </span>
+              </span>
+            </a>
           </p>
         </div>
-        <div id="socials"></div>
+        <div id="socials">
+          <ul className="w-3/4 font-extrabold text-2xl inline-flex justify-between">
+            <li className="hover:scale-130 transition-transform duration-700">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/oluwatobilobabamisebi/"
+              >
+                <i className="fi fi-brands-instagram"></i>
+              </a>
+            </li>
+            <li className="hover:scale-130 transition-transform duration-700">
+              <a target="_blank" href="https://x.com/Za_Genius1">
+                <i className="fi fi-brands-twitter-alt"></i>
+              </a>
+            </li>
+            <li className="hover:scale-130 transition-transform duration-700">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/oluwatobiloba-bamisebi-469800347"
+              >
+                <i className="fi fi-brands-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

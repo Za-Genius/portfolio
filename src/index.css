@@ -221,4 +221,9 @@ button:focus-visible {
     content: "";
     display: none;
   }
+  #contact-me::after,
+  #contact-me::before {
+    content: "";
+    display: none;
+  }
 }
