@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 export interface IProject {
   name: string;
@@ -14,7 +14,7 @@ export interface IProject {
 }
 
 const Project: React.FC<IProject> = (data) => {
-  const [collapsed, setCollapsed] = useState(true);
+  // const [collapsed, setCollapsed] = useState(true);
   return (
     <div className="w-full grid grid-cols-12 gap-x-4">
       <div className="relative w-full h-52 md:h-56 overflow-hidden col-span-5">
