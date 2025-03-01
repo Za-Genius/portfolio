@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Agrictrail",
+    "role": "Frontend Engineer.",
+    "role-descriptions": ["UI implementation", "Api consumation"],
+    "description": "Food System Management App for The Agric Sector.",
+    "technologies": ["Nextjs", "Chakra-ui", "redux-toolkit", "tailwindCss"],
+    "features": [
+      "Farm activity logging",
+      "Managing financial records",
+      "Products placement",
+      "Managing schedules",
+      "Account creation and managing of users."
+    ],
+    "url": "https://www.agrictrail.com/",
+    "codebase": "",
+    "isPrivate": true,
+    "image": "/agrictrail.png"
+  },
+  {
+    "name": "Veesitor",
+    "role": "Backend Engineer.",
+    "role-descriptions": [
+      "CRUD API creations for multiple featuress",
+      "API documentation"
+    ],
+    "description": "Designed to Simplify Estate Management and Enhance Security, Convenience, and Efficiency.",
+    "technologies": ["Nestjs", "mongodb", "paystack", "coralpay"],
+    "features": [
+      "Estate/Community creation",
+      "Estate/Community access check-in and check-out",
+      "Property management",
+      "Bills creation and collection",
+      "Utility purchases",
+      "Account creation and managing of users and user roles."
+    ],
+    "url": "https://veesitor.com/",
+    "codebase": "",
+    "isPrivate": true,
+    "image": "/veesitor.png"
+  }
+]
