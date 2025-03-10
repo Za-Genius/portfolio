@@ -1,6 +1,7 @@
 [
   {
     "name": "Agrictrail",
+    "type": "frontend",
     "role": "Frontend Engineer.",
     "role-descriptions": ["UI implementation", "Api consumation"],
     "description": "Food System Management App for The Agric Sector.",
@@ -19,6 +20,7 @@
   },
   {
     "name": "Veesitor",
+    "type": "backend",
     "role": "Backend Engineer.",
     "role-descriptions": [
       "CRUD API creations for multiple featuress",

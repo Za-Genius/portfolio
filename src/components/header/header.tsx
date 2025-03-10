@@ -5,7 +5,7 @@ const Header = () => {
   const location = useLocation();
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Resume", path: "/OLUWATOBILOBA BAMISEBI-CV-1.pdf" },
+    { name: "Resume", path: "/OLUWATOBILOBA BAMISEBI-CV.pdf" },
     { name: "Portfolio", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];

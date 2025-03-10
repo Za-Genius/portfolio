@@ -4,7 +4,7 @@ import Project from "./project";
 
 const Portfolio = () => {
   return (
-    <div className="w-full pt-5 max-w-4xl mx-auto">
+    <div className="w-full pt-5 max-w-5xl mx-auto">
       <div className="slide-up md:text-center text-xl font-semibold mt-6 mb-20">
         <p className="">
           I have been privileged to work on some interesting live projects, that
