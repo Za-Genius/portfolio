@@ -43,8 +43,12 @@ const Project: React.FC<IProject> = (data) => {
       </div>
       <div className="col-span-full md:col-span-7">
         <p className="w-full">
-          <span className="font-bold">{data.name}</span> |
-          {`${data.description}`}
+          <span className="font-bold">
+            <a href={data.url} target="_blank" rel="noopener noreferrer">
+              {data.name}
+            </a>
+          </span>{" "}
+          |{`${data.description}`}
         </p>
         <div
           className={classNames(
