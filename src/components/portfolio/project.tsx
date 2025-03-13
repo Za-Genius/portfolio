@@ -2,8 +2,6 @@
 
 import classNames from "classnames";
 import { useState } from "react";
-import Lines from "../ui/lines";
-
 export interface IProject {
   name: string;
   type: string;
