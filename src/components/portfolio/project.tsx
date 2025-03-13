@@ -2,6 +2,7 @@
 
 import classNames from "classnames";
 import { useState } from "react";
+import Lines from "../ui/lines";
 
 export interface IProject {
   name: string;
@@ -22,6 +23,9 @@ const Project: React.FC<IProject> = (data) => {
   const [isClicked, setIsClicked] = useState(false);
   return (
     <div className="w-full grid grid-cols-12 gap-4 my-4 relative overflow-hidden">
+      {/* <div className="relative z-40">
+        <Lines />
+      </div> */}
       <span
         className={classNames(
           " absolute text-xs bottom-1 font-bold z-4 right-0 capitalize p-1 rounded-sm shadow-2xs",

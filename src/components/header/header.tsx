@@ -11,9 +11,9 @@ const Header = () => {
   ];
   return (
     <div className=" w-full flex justify-between px-4 py-6 sm:px-16 items-center">
-      <div className="rounded-full h-16 w-16 outline-2 outline-[#091221]">
+      <div className="rounded-full h-14 w-14 outline-2 outline-[#091221]">
         <img
-          src="/pass-photo.JPG"
+          src="/logo.png"
           alt="HEADSHOT"
           className="w-full h-full rounded-full"
           style={{ objectFit: "cover", objectPosition: "top" }}
