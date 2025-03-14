@@ -8,7 +8,7 @@
 
   color-scheme: light dark;
   color: #c4c3c3de;
-  background: linear-gradient(to bottom, #091221, #091221, #000000);
+  background: linear-gradient(to top, #091221, #091221, #000000);
 
   background-attachment: fixed;
   background-size: cover;
